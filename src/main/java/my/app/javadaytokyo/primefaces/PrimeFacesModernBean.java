@@ -2,16 +2,16 @@ package my.app.javadaytokyo.primefaces;
 
 import java.util.stream.IntStream;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "primeFacesModernBean")
-@RequestScoped
+@Scope("request")
 public class PrimeFacesModernBean {
     
     @Getter @Setter

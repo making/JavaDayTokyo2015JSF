@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.primefaces.model.DefaultTreeNode;
 import org.primefaces.model.TreeNode;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
@@ -17,7 +18,8 @@ import org.primefaces.model.TreeNode;
  */
 @Getter @Setter
 @Named(value = "primeFacesBean")
-@ViewScoped
+//@ViewScoped // TODO View scope is not used with Spring.
+@Scope("session")
 public class PrimeFacesBean implements Serializable{
 
     private String input;

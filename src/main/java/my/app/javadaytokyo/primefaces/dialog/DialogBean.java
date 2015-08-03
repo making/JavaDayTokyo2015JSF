@@ -11,13 +11,15 @@ import javax.faces.view.ViewScoped;
 import lombok.Getter;
 import lombok.Setter;
 import org.primefaces.context.RequestContext;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "dialogBean")
-@ViewScoped
+//@ViewScoped // TODO View scope is not used with Spring.
+@Scope("session")
 public class DialogBean implements Serializable{
     
     @Getter @Setter

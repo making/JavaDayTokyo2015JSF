@@ -1,17 +1,17 @@
 package my.app.javadaytokyo.argument;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "parameter")
-@SessionScoped
+@Scope("session")
 public class Parameter implements Serializable {
 
     @Getter @Setter

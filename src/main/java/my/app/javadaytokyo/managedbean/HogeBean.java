@@ -2,9 +2,9 @@ package my.app.javadaytokyo.managedbean;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import lombok.Getter;
+import org.springframework.context.annotation.Scope;
 
 /**
  * 管理Beanスライドのサンプルコード.
@@ -14,7 +14,7 @@ import lombok.Getter;
  * @author kikuta
  */
 @Named(value = "hogeBean")
-@RequestScoped
+@Scope("request")
 public class HogeBean {
 
     /**

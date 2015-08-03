@@ -1,5 +1,7 @@
 package my.app.javadaytokyo.phase;
 
+import org.springframework.context.annotation.Scope;
+
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
@@ -11,7 +13,8 @@ import javax.faces.view.ViewScoped;
  * @author kikuta
  */
 @Named(value = "phaseCheckBean")
-@ViewScoped
+//@ViewScoped // TODO View scope is not used with Spring.
+@Scope("session")
 public class PhaseCheckBean implements Serializable{
 
     private String str;

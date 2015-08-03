@@ -8,6 +8,7 @@ import javax.inject.Named;
 import javax.faces.view.ViewScoped;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
@@ -15,7 +16,8 @@ import lombok.Setter;
  */
 @Getter @Setter
 @Named(value = "dataTableBean")
-@ViewScoped
+//@ViewScoped // TODO View scope is not used with Spring.
+@Scope("session")
 public class DataTableBean implements Serializable{
 
     private List<Employee> listEmployee;

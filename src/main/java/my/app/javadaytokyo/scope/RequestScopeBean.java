@@ -1,16 +1,16 @@
 package my.app.javadaytokyo.scope;
 
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "requestScopeBean")
-@RequestScoped
+@Scope("request")
 public class RequestScopeBean {
 
     @Getter @Setter

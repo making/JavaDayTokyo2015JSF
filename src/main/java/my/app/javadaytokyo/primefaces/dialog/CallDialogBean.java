@@ -5,17 +5,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import lombok.Getter;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "callDialogBean")
-@RequestScoped
+@Scope("request")
 public class CallDialogBean {
     
     @Getter

@@ -1,8 +1,9 @@
 package my.app.javadaytokyo.dynamic;
 
+import org.springframework.context.annotation.Scope;
+
 import java.util.List;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.component.html.HtmlCommandButton;
 import javax.faces.component.html.HtmlInputText;
@@ -14,7 +15,7 @@ import javax.faces.context.FacesContext;
  * @author kikuta
  */
 @Named(value = "dynamicHtmlBean")
-@RequestScoped
+@Scope("request")
 public class DynamicHtmlBean {
 
     public void createView(){

@@ -8,13 +8,15 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "argToBean")
-@ViewScoped
+//@ViewScoped // TODO View scope is not used with Spring.
+@Scope("session")
 public class ArgToBean implements  Serializable{
 
     /**

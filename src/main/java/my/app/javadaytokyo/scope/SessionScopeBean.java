@@ -1,17 +1,17 @@
 package my.app.javadaytokyo.scope;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "sessionScopeBean")
-@SessionScoped
+@Scope("session")
 public class SessionScopeBean implements Serializable {
 
     @Getter @Setter

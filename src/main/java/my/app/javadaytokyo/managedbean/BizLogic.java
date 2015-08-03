@@ -1,13 +1,13 @@
 package my.app.javadaytokyo.managedbean;
 
-import javax.ejb.Stateless;
+import org.springframework.stereotype.Service;
 
 /**
  * EJB
  * 
  * @author kikuta
  */
-@Stateless
+@Service
 public class BizLogic {
     
     public String execBizLogic(){

@@ -2,17 +2,17 @@ package my.app.javadaytokyo.bookmarkable;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "toBean")
-@RequestScoped
+@Scope("request")
 public class ToBean {
 
     @Getter @Setter

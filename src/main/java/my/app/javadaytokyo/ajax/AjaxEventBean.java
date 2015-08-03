@@ -1,14 +1,15 @@
 package my.app.javadaytokyo.ajax;
 
+import org.springframework.context.annotation.Scope;
+
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 
 /**
  *
  * @author kikuta
  */
 @Named(value = "ajaxEventBean")
-@RequestScoped
+@Scope("request")
 public class AjaxEventBean {
 
     public void executeFromBlur(){
